@@ -1,0 +1,96 @@
+/*
+    Modules
+    more involved sections of styles often containing modules and/or components
+	- prefix these classes with mod-
+	- order alphabetically according to containers
+*/
+
+/**
+    => mod-skeleton
+--------------------------------------------------*/
+.mod-skeleton {
+    margin: 0 auto;
+    position: relative;
+    width: 827px;
+    height: 455px;
+}
+    .mod-skeleton-lightbox {
+        background: url(../../images/skeleton.jpg) no-repeat 0 0;
+        width: 827px;
+        height: 455px;
+    }
+        .mod-skeleton-lightbox ul li {
+            position: absolute;
+            list-style: none outside none;
+        }
+        .mod-skeleton-lightbox ul li a * {
+            cursor: pointer !important;
+        }
+        .mod-skeleton-lightbox ul li a path {
+            stroke: none;
+        }
+    .mod-skeleton-clips {
+    }
+        .mod-skeleton-clip {
+            background: url(../../images/clipboard.jpg) no-repeat 0 0;
+            width: 706px;
+            height: 369px;
+            position: relative;
+            margin: 0;
+            padding: 70px 0 0 120px;
+            top: 0;
+            left: 0;
+        }
+        .mod-skeleton-clipsTactive .mod-skeleton-clipThidden {
+            /* visually hidden */ position:absolute; display: block; top: auto; left: -10000px; width: 1px; height: 1px; 
+            opacity: 0;
+            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+            filter: alpha(opacity=0);
+        }
+        .mod-skeleton-clipsTactive .mod-skeleton-clipTactive {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .mod-skeleton-clip-return {
+            background: url(../../images/returnicon.gif) no-repeat 0 2px;
+            font-weight: bold;
+            color: #0080a6;
+            display: block;
+            padding: 0 0 0 17px;
+        }
+        .mod-skeleton-clip-return:link {
+            color: #0080a6;
+            text-decoration: none;
+        }
+        .mod-skeleton-clip-image {
+            position: absolute;
+            top: 52px;
+            right: 7px;
+        }
+        .mod-skeleton-clip ul {
+            color: #404040;
+            font-size: 1.166667em;
+            line-height: 1.285714;
+            margin: 68px 30px 0 0;
+            padding: 0;
+        }
+            .mod-skeleton-clip ul li {
+                border-bottom: solid 1px #e6e6e6;
+                padding: 5px 160px 0 0;
+            }
+                .mod-skeleton-clip-label {
+                    font-weight: bold;
+                }
+        .mod-skeleton-clip-small {
+            color: #15a577;
+            position: absolute;
+            bottom: 10px;
+            left: 120px;
+        }
+    .mod-skeleton .cp-safety365 {
+        position: absolute;
+        right: 5px;
+        bottom: 30px;
+    }
+

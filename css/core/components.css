@@ -1,0 +1,26 @@
+/*
+    Components
+    
+    - basic reusable items which are simple
+    - components cannot contain child components or modules
+    
+    Component styles should be grouped together with a heading name
+    and description. Styles within each group should then appear as
+    they do in the markup including indentation.
+    
+    Component definitions should be ordered alphabetically.
+
+*/
+
+
+/**
+    => cp-safety365
+--------------------------------------------------*/
+.cp-safety365 {
+        background: url(../../images/safety365.png) no-repeat 0 0;
+        width: 82px;
+        height: 38px;
+}
+    .cp-safety365 span {
+        /* visually hidden */ position:absolute; display: block; top: auto; left: -10000px; width: 1px; height: 1px; 
+    }
