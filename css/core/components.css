@@ -13,14 +13,3 @@
 */
 
 
-/**
-    => cp-safety365
---------------------------------------------------*/
-.cp-safety365 {
-        background: url(../../images/safety365.png) no-repeat 0 0;
-        width: 82px;
-        height: 38px;
-}
-    .cp-safety365 span {
-        /* visually hidden */ position:absolute; display: block; top: auto; left: -10000px; width: 1px; height: 1px; 
-    }
