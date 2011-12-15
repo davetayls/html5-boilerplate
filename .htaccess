@@ -38,7 +38,7 @@
 # Cross-domain AJAX requests
 # ----------------------------------------------------------------------
 
-# Serve cross-domain ajax requests, disabled.
+# Serve cross-domain Ajax requests, disabled by default.
 # enable-cors.org
 # code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
 
@@ -46,6 +46,22 @@
 #    Header set Access-Control-Allow-Origin "*"
 #  </IfModule>
 
+
+# ----------------------------------------------------------------------
+# CORS-enabled images (@crossorigin)
+# ----------------------------------------------------------------------
+
+# Send CORS headers if browsers request them; enabled by default.
+# developer.mozilla.org/en/CORS_Enabled_Image
+# blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html
+# hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/
+
+<IfModule mod_setenvif.c>
+  <IfModule mod_headers.c>
+    SetEnvIf Origin ":" IS_CORS
+    Header set Access-Control-Allow-Origin "*" env=IS_CORS
+  </IfModule>
+</IfModule>
 
 
 # ----------------------------------------------------------------------
@@ -83,7 +99,7 @@ AddType video/ogg                      ogv
 AddType video/mp4                      mp4 m4v
 AddType video/webm                     webm
 
-# SVG.
+# SVG
 #   Required for svg webfonts on iPad
 #   twitter.com/FontSquirrel/status/14855840545
 AddType     image/svg+xml              svg svgz
@@ -91,20 +107,21 @@ AddEncoding gzip                       svgz
 
 # Webfonts
 AddType application/vnd.ms-fontobject  eot
-AddType application/x-font-ttf    ttf ttc
+AddType application/x-font-ttf         ttf ttc
 AddType font/opentype                  otf
 AddType application/x-font-woff        woff
 
 # Assorted types
-AddType image/x-icon                   ico
-AddType image/webp                     webp
-AddType text/cache-manifest            appcache manifest
-AddType text/x-component               htc
-AddType application/x-chrome-extension crx
-AddType application/x-opera-extension  oex
-AddType application/x-xpinstall        xpi
-AddType application/octet-stream       safariextz
-AddType text/x-vcard                   vcf
+AddType image/x-icon                        ico
+AddType image/webp                          webp
+AddType text/cache-manifest                 appcache manifest
+AddType text/x-component                    htc
+AddType application/x-chrome-extension      crx
+AddType application/x-opera-extension       oex
+AddType application/x-xpinstall             xpi
+AddType application/octet-stream            safariextz
+AddType application/x-web-app-manifest+json webapp 
+AddType text/x-vcard                        vcf
 
 
 
